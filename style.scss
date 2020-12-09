@@ -1,6 +1,6 @@
-$iris: #6865AA;
-$pupila: #1E1E1E;
-$background: #838585;
+$iris: #6865aa;
+$pupila: #1e1e1e;
+$background: #cbc0d3;
 $eye-size: 10rem;
 $size: 50px;
 $time-flicker: 3s;
@@ -40,11 +40,10 @@ $eye-movement: 10s;
 }
 
 .bottom-eyelid {
-  transform: translateY(-150%); 
-} 
+  transform: translateY(-150%);
+}
 
-
-.eye{
+.eye {
   background-color: white;
   width: $eye-size;
   height: $eye-size;
@@ -59,35 +58,40 @@ $eye-movement: 10s;
   margin: 0;
 }
 
-
-.iris{
+.iris {
   background-color: $iris;
-  width: $eye-size - 3;
-  height: $eye-size - 3;
+  width: $eye-size - 2;
+  height: $eye-size - 2;
   animation-name: move-eye;
   animation-duration: $eye-movement;
   animation-iteration-count: infinite;
 }
 
-.pupila{
+.pupila {
   background-color: black;
   width: $eye-size / 3;
   height: $eye-size / 3;
 }
 
 @keyframes close-eye {
-  50%  {
+  50% {
     transform: translateY(0%);
-    }
+  }
 }
 
 @keyframes move-eye {
   30% {
-    background-color: #C2D5A7;
-    transform: translateY(30%);
+    background-color: #f72585;
+    transform: translateY(40%);
+  }
+  40% {
+    background-color: #7209b7;
+  }
+  50% {
+    background-color: #3f37c9;
+    transform: translateX(40%);
   }
   90% {
-    background-color: #E2A9BE;
-    transform: translateX(30%);
+    background-color: #4cc9f0;
   }
 }
